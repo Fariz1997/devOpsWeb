@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy to Tomcat server') {
             steps {
-deploy adapters: [tomcat7(credentialsId: '6933c7f2-43b2-4bb4-aa01-d114cc62c705', path: '', url: 'http://localhost:8181')], contextPath: null, war: '**/*.war'
+                deploy adapters: [tomcat7(credentialsId: '6933c7f2-43b2-4bb4-aa01-d114cc62c705', path: '', url: 'http://localhost:8181')], contextPath: null, war: '**/*.war'
             }
         }
     }
